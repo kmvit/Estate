@@ -1,0 +1,15 @@
+﻿{%extends "base.html"%}
+
+
+{%block content%}
+	<p>Вы искали: <strong>{{ q }} рублей, {{ r }} комнат</strong></p>
+	<div class="estatelist">
+		{% for p in newestate %}
+			<h3>{{ p.name }}</h3>
+			<p><img style="width:150;" src="{{p.picture1.url}}"/></p>
+			<p>{{p.adres}}</p>
+			<p>{{p.body|truncatewords:10|safe}}</p>
+			<p>{{p.price}} руб.</p>       
+		{% endfor %}
+	</div>
+{%endblock%}                

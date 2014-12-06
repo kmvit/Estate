@@ -1,0 +1,188 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" >
+			<title>{%block title%}
+				Аренда недвижимости
+			{%endblock%}</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/favicon.png" type="image/png">
+
+	<!-- meta -->
+		<meta name="description" content="{{page.description}}">
+		<meta name="keywords" content="{{page.keyword}}">
+	<!-- css -->{% load staticfiles %}
+
+		<link href="{% static "css/default.css"%}" media="screen" rel="stylesheet" type="text/css" >
+		<link href="{% static "css/main.css"%}" media="screen" rel="stylesheet" type="text/css" >
+	<!-- js -->
+{% load sidebar %}
+		{% load headermenu %}
+
+	</head>
+<body>
+	<div id="wrapp">
+		<div id="wrappIn">
+			<div id="headerMenu">
+				<div id="menuWrapp">
+					
+					<p class="menuTtl">Наши представительства</p>
+											<ul id="menuCity">
+																											<li class="marker"><span>Санкт-Петербург</span><i class="markerL"></i><i class="markerR"></i></li>
+																																															<li><a href="/priozersk/">Приозерск</a></li>
+																																																									<li><a href="/gatchina/">Гатчина</a></li>
+																																																									<li><a href="/volosovo/">Волосово</a></li>
+																																																									<li><a href="/vsevolozhsk/">Всеволожск</a></li>
+																																	</ul>
+					
+					<div class="cleaner"><!-- --></div>
+					<p id="address"  class="spbAddress" >Колокольная, 5; Жуковского, 6; Комендантская пл., 1</p>
+										<i class="flag" id="spb"></i>
+
+				</div><!-- /#menuWrapp -->
+									<ul id="navigation">
+													
+															{%show_headmenu %}
+																		</ul>
+				
+			</div><!-- /#headerMenu -->
+
+			<div id="left">
+				<div id="logo">
+								<img src="{% static "i/logo.png"%}" height="39" alt=""/>
+				<img src="/i/spb.gif" alt="" style="height:10px;"/>				Недвижимость<br/>в&nbsp;Петербурге и области <br/>
+				<p class="headerPhone">
+									<a class="link popupPhone" href="#"><b>(812) 327-27-95</b></a><br/>
+									<a class="link popupPhone" href="#"><b>(812) 640-27-40</b></a><br/>
+									<a class="link popupPhone" href="#"><b>(812) 579-99-07</b></a><br/>
+								</p>
+			</div>
+				<div id="consultant" class="consultant" style="display: none">
+					<div id="wrappBaloon">
+						<div id="baloon">
+							<div id="baloonTxt">
+								<p>Консультант на месте</p>
+								<p class="button" id="consbtn"><a href="#" id="conshref">Задать вопрос</a></p>
+								<div class="cleaner"><!-- --></div>
+							</div>
+						</div>
+					</div>
+				</div><!-- /#consultant -->
+				<ul id="callMenu">
+					<li class="skype">realag.ru</li>
+					<li class="icq">600571963</li>
+				</ul>
+				<div class="cleaner"><!-- --></div>
+				<div id="menu">
+						{%block sidebar%}
+					{% show_sidebar %} 
+				{%endblock%}
+									</div><!-- /#menu -->
+									<div id="news">
+						<p class="menuTtl">Новости</p>
+													<p class="newsBox"><a href="/announces/id54/">АН "РЕАЛ" приняло участие в выставке "Жилищный проект"</a></p>
+													<p class="newsBox"><a href="/announces/id53/">Выездное заседание Департамента долевого строительства</a></p>
+													<p class="newsBox"><a href="/announces/id52/">Сбербанк в «Реале»</a></p>
+											</div><!-- /#news -->
+							
+								<!--div class="wrappPattern"><div class="patternBox">
+					<p><strong><a href="#">Поучавствуйте в&nbsp;опросе</a>,</strong> чтобы улучшить качество нашей работы</p>
+				</div></div-->
+			</div><!-- /#left -->
+			<div id="center">
+				
+									<div id="wrappFrmBox">
+									
+									
+								
+									
+									
+
+														<input type="hidden" id="cnt_1_7777" value="1">
+	<input type="hidden" id="cnt_2_7777" value="1">
+	<input type="hidden" id="cnt_1_3" value="0">
+	
+<fieldset>
+	<legend>Поиск жилья</legend>
+		<form method="get" action="/search/" id="s_form">
+		<div class="frmBox">
+			
+			<p class="frmTtl">Купить <a  id="obj1" href="#" class="active"  data-group="1" rel="1">квартиру</a> <span > <span id="or">или</span> <a id="obj2" href="#" data-group="1" rel="2" class="link2">комнату</a></span> в <a id="house1" href="#" data-group="2" rel="7777" class="active">построенном доме</a> <span >или <a id="house2" data-group="2" href="#" rel="3" class="link2">новостройке</a></span></p>
+			<div class="inpBox" id="frmPrice">
+				<p><label for="min">Стоимость</label></p>
+				<p><input type="range" min="5000" max="50000" step="2000" name="price"></p>
+
+
+				Введите код:
+			<p class="inpSlider"><input type="text" name="code" ></p>
+			</div>
+			
+			<div class="inpBox" id="frmRooms">
+				<p>Количество комнат</p>
+																						<select size="1"  name="room">
+						<option  selected="selected"></option>
+						<option >1</option>
+						<option >2</option>
+						<option >3</option>
+						<option >4</option>
+						<option >5</option>
+					</select>
+															<div class="cleaner"><!-- --></div>
+			</div>
+							
+						<div class="cleaner"><!-- --></div>
+			<p class="searchBtn">
+								<input type="submit" value="Посмотреть результаты" />
+			</p>
+		
+			<div class="cleaner"><!-- --></div>
+		</div><!-- /#frmBox -->
+	</form>
+</fieldset>
+<i class="shadowL"></i><i class="shadowR"></i>											</div><!-- /#wrappFrmBox -->
+			{%block content%}
+				{%endblock%}							
+			
+
+			
+
+			<div class="cleaner"><!-- --></div>
+							<div id="aboutMain">
+					<h1>«РЕАЛ» - агентство недвижимости Санкт-Петербурга</h1>
+<p>Агентство &laquo;Реал&raquo; создано в&nbsp;январе 1999&nbsp;года. Уже через год мы&nbsp;открыли несколько отделений в&nbsp;различных районах города, расширили спектр предоставляемых услуг.</p>
+<p>В&nbsp;данный момент АН&nbsp;&laquo;РЕАЛ&raquo; имеет четыре представительства в&nbsp;Санкт-Петербурге, в&nbsp;которых работают более 300&nbsp;специалистов. А&nbsp;также имеются отделения в&nbsp;<a href="/gatchina/">Гатчине</a>, <a href="/vsevolozhsk/">Всеволожске</a>, <a href="/volosovo/">Волосово</a>, <a href="/priozersk/">Приозерске</a>.</p>				</div>
+				
+				<div class="cleaner"><!-- --></div>
+			
+
+		
+		</div><!-- /#center -->
+	<div class="cleaner"><!-- --></div>
+</div><!-- /#wrappIn -->
+
+		
+		<div id="footempty">&nbsp;</div>
+		<div id="footerWrapp">
+			<div id="footer">
+				<div id="footerInfo">
+					<p>(812) 327-27-95<br/>
+					<span class="skype">realag.ru</span><br/>
+					<span class="icq">600571963</span></p>
+											<p class="footerContact"><a href="/contacts/">Контактная информация</a></p>
+									
+				</div><!-- /#footerInfo -->
+				
+				<div id="copy">
+					<p>© Реал, 2005&mdash;2014</p>
+					<p id="ks"></p>
+				</div>
+			</div><!-- /#footer -->
+		</div><!-- /#footerWrapp -->
+	</div><!-- /#wrapp -->
+	
+	
+</body>
+<!--textarea id="dbg"></textarea-->
+</html>
+
+

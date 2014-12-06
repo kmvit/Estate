@@ -1,0 +1,16 @@
+ {%extends "base.html"%} 
+
+ {%block content%}
+ {% if errors %}
+        <ul>
+            {% for error in errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form action="/search/" method="get">
+        <input type="text" name="price">
+		<input type="text" name="adress">
+        <input type="submit" value="Посмотреть">
+    </form>
+{%endblock%}

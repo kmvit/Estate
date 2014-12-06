@@ -1,0 +1,8 @@
+{% load category_tree %}
+<li>{{ category.name }}
+<ul>
+    {% for child in children %}
+	{% category_tree child %}
+    {% endfor %}
+</ul>
+</li>

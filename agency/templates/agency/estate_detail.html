@@ -1,0 +1,27 @@
+ {%extends "base.html"%}
+
+  
+ {%block title%}
+				{{estate.name}}
+			{%endblock%}
+ 
+ 
+{%block content%}
+<h3>{{estate}}</h3>
+<p>{{estate.adres}}</p>
+<a href="{{estate.picture1.url}}"><img src="{{estate.picture1.url}}"/></a>
+{% if estate.picture2%}
+<a href="{{estate.picture2.url}}"><img src="{{estate.picture2.url}}"/></a>
+{%endif%}
+{% if estate.picture3%}
+<a href="{{estate.picture3.url}}"><img src="{{estate.picture3.url}}"/></a>
+{%endif%}
+<div class="desc-estate">
+<p>{{estate.body|safe}}</p>
+<p>{{estate.room}}</p>
+<p>{{estate.phone}}</p>
+</div>
+
+ Визиты за сегондя: {{visits }}<br>
+<p>Последний визит : {{last_visit }}</p>
+{%endblock%}

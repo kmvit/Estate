@@ -1,0 +1,8 @@
+<ul>
+						{% for category in categories %}
+							<h3><a href="/category/{{category.slug}}">{{category}}</a></h3>
+							{% for sub_category in category.category_set.all %}
+								<li><a href="/category/{{sub_category.slug}}"> {{sub_category}}</a></li>
+							{% endfor %}
+						{% endfor %}
+					</ul>

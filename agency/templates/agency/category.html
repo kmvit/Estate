@@ -1,0 +1,36 @@
+﻿{%extends "base.html"%}
+
+
+
+ 
+ {%block title%}
+				{{category.name}}
+			{%endblock%}
+{%block content%}
+	<div><h3>{{category.name}}</h3></div>
+   <div class="realtyOuter" id="estateList">
+	<div id="realtyWrapp">
+		{% for est in estates %}
+			<div class="realtyBox">
+				<div class="relatyImg" style="background-image:url('{{est.picture1.url}}');"><i></i></div>
+				<div class="realtyDescr">
+					<p class="realtyLink">	<a href="/category/{{est.category.slug}}/{{est.slug}}">{{ est.name }}</a></p>
+					<p>{{est.adres}}</p>
+					<p>{{est.body|truncatewords:10|safe}}</p> 	
+				</div>	
+				<div class="realtyPrice">
+																															<p class="price"><span><span><b>{{est.price}} руб</b></span></span></p>
+																														<ul>
+										
+									</div>
+									<div class="cleaner"><!-- --></div>
+									
+			</div>			
+		{% endfor %}
+	</div>
+</div>
+{%endblock%}
+
+
+
+
